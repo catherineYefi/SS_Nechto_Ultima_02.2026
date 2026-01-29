@@ -1,7 +1,7 @@
 /* ============================================
-   ULTIMA 9.0 PRESENTATION THEME
+   ULTIMA 9.0 PRESENTATION THEME - FINAL
    Apple Keynote + McKinsey inspired
-   UPDATED: Увеличенные шрифты для проектора
+   FINAL VERSION: Все улучшения включены
    ============================================ */
 
 :root {
@@ -11,6 +11,9 @@
     --color-accent: #6366f1;
     --color-accent-light: #818cf8;
     --color-highlight: #f59e0b;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
     --color-text-primary: #f8fafc;
     --color-text-secondary: #cbd5e1;
     --color-text-muted: #94a3b8;
@@ -34,7 +37,7 @@
 
 .reveal {
     font-family: var(--font-family);
-    font-size: 40px; /* УВЕЛИЧЕНО: было 32px */
+    font-size: 48px; /* УВЕЛИЧЕНО: было 40px */
     font-weight: 400;
     color: var(--color-text-primary);
 }
@@ -44,7 +47,7 @@
 }
 
 /* ============================================
-   TYPOGRAPHY
+   TYPOGRAPHY - СУПЕР КРУПНЫЕ ЗАГОЛОВКИ
    ============================================ */
 
 .reveal h1,
@@ -59,16 +62,22 @@
 }
 
 .reveal h1 {
-    font-size: 5rem; /* УВЕЛИЧЕНО: было 4rem */
+    font-size: 6rem;
 }
 
 .reveal h2 {
-    font-size: 3.2rem; /* УВЕЛИЧЕНО: было 2.5rem */
-    margin-bottom: var(--spacing-md);
+    font-size: 4.5rem; /* ОГРОМНЫЕ ЗАГОЛОВКИ */
+    margin-bottom: var(--spacing-xl);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .reveal h3 {
-    font-size: 2.2rem; /* УВЕЛИЧЕНО: было 1.75rem */
+    font-size: 2.5rem;
+}
+
+.reveal h4 {
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .reveal p {
@@ -81,10 +90,40 @@
     font-weight: 600;
 }
 
-.reveal em {
-    color: var(--color-text-secondary);
-    font-style: italic;
+/* ============================================
+   LUCIDE ICONS
+   ============================================ */
+
+.inline-icon {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    margin-right: 0.3em;
 }
+
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    color: var(--color-accent-light);
+}
+
+.icon.success { color: var(--color-success); }
+.icon.warning { color: var(--color-warning); }
+.icon.error { color: var(--color-error); }
+
+.metric-icon { width: 4rem; height: 4rem; margin-bottom: var(--spacing-md); }
+.revenue-icon { width: 3rem; height: 3rem; margin-bottom: var(--spacing-sm); }
+.benefit-icon, .project-icon { width: 3.5rem; height: 3.5rem; margin-bottom: var(--spacing-md); }
+.conclusion-icon { width: 2rem; height: 2rem; margin-right: var(--spacing-sm); vertical-align: middle; }
+.conclusion-icon.large { width: 3rem; height: 3rem; }
+.note-icon { width: 1.5rem; height: 1.5rem; margin-right: var(--spacing-sm); color: var(--color-highlight); }
+.quote-icon { width: 3rem; height: 3rem; margin-bottom: var(--spacing-md); }
+.box-icon { width: 2.5rem; height: 2.5rem; margin-bottom: var(--spacing-sm); }
+.timeline-icon { width: 3rem; height: 3rem; margin-bottom: var(--spacing-sm); }
+.feature-icon { width: 3rem; height: 3rem; margin-bottom: var(--spacing-md); }
+.section-icon { width: 2.5rem; height: 2.5rem; margin-right: var(--spacing-sm); vertical-align: middle; }
+.final-icon { width: 5rem; height: 5rem; margin-bottom: var(--spacing-lg); }
 
 /* ============================================
    TITLE SLIDE
@@ -100,7 +139,7 @@
 }
 
 .main-title {
-    font-size: 6.5rem !important; /* УВЕЛИЧЕНО: было 5rem */
+    font-size: 7.5rem !important;
     font-weight: 800 !important;
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
     -webkit-background-clip: text;
@@ -111,7 +150,7 @@
 }
 
 .subtitle {
-    font-size: 2.2rem !important; /* УВЕЛИЧЕНО: было 1.75rem */
+    font-size: 2.5rem !important;
     color: var(--color-text-secondary);
     font-weight: 500;
     margin-bottom: var(--spacing-md) !important;
@@ -125,13 +164,13 @@
 }
 
 .tagline {
-    font-size: 1.6rem; /* УВЕЛИЧЕНО: было 1.25rem */
+    font-size: 1.8rem;
     color: var(--color-text-muted);
     margin-bottom: var(--spacing-sm) !important;
 }
 
 .tagline-secondary {
-    font-size: 1.3rem; /* УВЕЛИЧЕНО: было 1rem */
+    font-size: 1.5rem;
     color: var(--color-text-muted);
     font-style: italic;
 }
@@ -145,16 +184,17 @@
     margin: var(--spacing-xl) 0;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: 1.4rem; /* УВЕЛИЧЕНО: было 1.1rem */
+    font-size: 1.6rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .comparison-table thead th {
     background: var(--color-surface);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     font-weight: 600;
     text-align: left;
     border-bottom: 2px solid var(--color-border);
-    font-size: 1.7rem; /* УВЕЛИЧЕНО: было 1.3rem */
+    font-size: 2rem;
 }
 
 .comparison-table thead th.highlight-col {
@@ -163,10 +203,10 @@
 }
 
 .comparison-table tbody td {
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     border-bottom: 1px solid var(--color-border);
     color: var(--color-text-secondary);
-    font-size: 1.4rem; /* УВЕЛИЧЕНО */
+    font-size: 1.6rem;
 }
 
 .comparison-table tbody td.highlight-cell {
@@ -177,6 +217,15 @@
 
 .comparison-table tbody tr:hover td {
     background: var(--color-surface);
+}
+
+.comparison-table tbody tr.highlight-row {
+    background: rgba(99, 102, 241, 0.15);
+}
+
+.comparison-table tbody tr.highlight-row td {
+    font-weight: 600;
+    color: var(--color-text-primary);
 }
 
 /* ============================================
@@ -194,12 +243,13 @@
     align-items: flex-start;
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-lg);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     background: var(--color-surface);
     border-radius: 12px;
     border-left: 3px solid var(--color-accent);
     transition: all 0.3s ease;
-    font-size: 1.3rem; /* УВЕЛИЧЕНО */
+    font-size: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .insight-item:hover {
@@ -207,25 +257,320 @@
     transform: translateX(8px);
 }
 
-.insight-item .icon {
-    font-size: 2.5rem; /* УВЕЛИЧЕНО: было 2rem */
-    flex-shrink: 0;
-    line-height: 1;
-}
-
 .insight-item .text {
     flex: 1;
     line-height: 1.5;
     color: var(--color-text-secondary);
-    font-size: 1.3rem; /* УВЕЛИЧЕНО */
+    font-size: 1.5rem;
+}
+
+.insight-item .text.large {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.insight-list.compact .insight-item {
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+}
+
+.insight-list.compact .insight-item .text {
+    font-size: 1.4rem;
+}
+
+.insight-list.compact.large-text .insight-item {
+    padding: var(--spacing-lg);
+}
+
+.insight-list.compact.large-text .insight-item .text {
+    font-size: 1.6rem;
+}
+
+.insight-list.centered {
+    text-align: center;
+}
+
+.insight-list.centered .insight-item {
+    justify-content: center;
+}
+
+.insight-list.compact-vertical .insight-item {
+    margin-bottom: var(--spacing-sm);
+    padding: var(--spacing-md);
 }
 
 /* ============================================
-   UTILITY CLASSES
+   METRICS
+   ============================================ */
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+    margin: var(--spacing-xl) 0;
+}
+
+.metric-card {
+    background: var(--color-surface);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-value {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-accent-light);
+    line-height: 1;
+    margin-bottom: var(--spacing-md);
+}
+
+.metric-label {
+    font-size: 1.5rem;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.metric-context {
+    font-size: 1.3rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* ============================================
+   GRIDS
+   ============================================ */
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin: var(--spacing-xl) 0;
+}
+
+.comparison-box {
+    background: var(--color-surface);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    border-left: 3px solid var(--color-border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-box.highlight {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(129, 140, 248, 0.1));
+    border-left-color: var(--color-accent);
+}
+
+.comparison-box h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin: var(--spacing-lg) 0;
+}
+
+.two-column.balanced > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.two-column h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-accent-light);
+}
+
+/* ============================================
+   CENTERED CONTENT (слайд 17)
+   ============================================ */
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-xl);
+}
+
+.converter-section {
+    width: 100%;
+    max-width: 900px;
+}
+
+.converter-section h3 {
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.converter-section.highlight {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(129, 140, 248, 0.1));
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+}
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.timeline-item {
+    background: var(--color-surface);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-accent-light);
+}
+
+.timeline-item p {
+    font-size: 1.4rem;
+    color: var(--color-text-secondary);
+}
+
+/* ============================================
+   FEATURE BOXES
+   ============================================ */
+
+.feature-box {
+    background: var(--color-surface);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+    margin: var(--spacing-lg) 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box h3,
+.feature-box h4 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-accent-light);
+}
+
+.feature-box p {
+    font-size: 1.4rem;
+    color: var(--color-text-secondary);
+}
+
+/* ============================================
+   BIG QUOTES
+   ============================================ */
+
+.big-quote {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-accent-light);
+    margin: var(--spacing-xl) 0;
+    line-height: 1.4;
+    padding: var(--spacing-xl);
+}
+
+.big-quote.highlight {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(129, 140, 248, 0.15));
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+}
+
+/* ============================================
+   REVENUE & BENEFITS
+   ============================================ */
+
+.revenue-breakdown {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+    margin: var(--spacing-xl) 0;
+}
+
+.revenue-item {
+    background: var(--color-surface);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.revenue-item h3 {
+    font-size: 1.7rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.revenue-item .metric-value {
+    font-size: 3rem;
+    margin: var(--spacing-md) 0;
+}
+
+.total-revenue {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-xl);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(129, 140, 248, 0.15));
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+}
+
+.total-revenue h3 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.benefits-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+    margin: var(--spacing-xl) 0;
+}
+
+.benefit-box,
+.project-box {
+    background: var(--color-surface);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.benefit-box h3,
+.project-box h3 {
+    font-size: 1.7rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-accent-light);
+}
+
+/* ============================================
+   UTILITIES
    ============================================ */
 
 .section-subtitle {
-    font-size: 1.6rem; /* УВЕЛИЧЕНО: было 1.25rem */
+    font-size: 1.8rem;
     color: var(--color-text-muted);
     font-weight: 400;
     margin-top: var(--spacing-sm);
@@ -233,21 +578,38 @@
 
 .conclusion {
     margin-top: var(--spacing-xl);
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl);
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(129, 140, 248, 0.1));
     border-radius: 12px;
     border-left: 4px solid var(--color-accent);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .conclusion p {
     margin: 0;
-    font-size: 1.5rem; /* УВЕЛИЧЕНО: было 1.2rem */
+    font-size: 1.7rem;
     color: var(--color-text-primary);
+}
+
+.conclusion h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.conclusion.elevated {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(129, 140, 248, 0.2));
+    border: 2px solid var(--color-accent);
+}
+
+.conclusion.full-width,
+.full-width {
+    width: 100%;
+    margin-top: var(--spacing-xl);
 }
 
 .note {
     margin-top: var(--spacing-lg);
-    padding: var(--spacing-md);
+    padding: var(--spacing-lg);
     background: rgba(245, 158, 11, 0.1);
     border-radius: 8px;
     border-left: 3px solid var(--color-highlight);
@@ -256,11 +618,81 @@
 .note p {
     margin: 0;
     color: var(--color-text-secondary);
-    font-size: 1.3rem; /* УВЕЛИЧЕНО: было 1rem */
+    font-size: 1.5rem;
 }
 
 /* ============================================
-   REVEAL.JS OVERRIDES
+   FINAL SLIDE WOW
+   ============================================ */
+
+.final-slide {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.final-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+}
+
+.statement-text {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.4;
+}
+
+.divider-animated {
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    margin: var(--spacing-xl) auto;
+}
+
+.final-highlight {
+    margin: var(--spacing-xl) 0;
+    padding: var(--spacing-xl);
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(129, 140, 248, 0.15));
+    border-radius: 12px;
+    border: 2px solid var(--color-accent);
+}
+
+.highlight-text {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--color-accent-light);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.4;
+}
+
+.final-brand {
+    margin-top: var(--spacing-xl);
+}
+
+.brand-title {
+    font-size: 8rem !important;
+    font-weight: 800 !important;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--spacing-md) !important;
+}
+
+.brand-tagline {
+    font-size: 2.5rem !important;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+/* ============================================
+   REVEAL OVERRIDES
    ============================================ */
 
 .reveal .controls {
@@ -281,20 +713,29 @@
     background: var(--color-surface);
     padding: 8px 16px;
     border-radius: 8px;
-    font-size: 1rem; /* УВЕЛИЧЕНО: было 0.8rem */
+    font-size: 1.2rem;
 }
 
 /* ============================================
    ANIMATIONS
    ============================================ */
 
-.reveal .fragment {
-    transition: all 0.3s ease;
+.reveal .fragment.fade-in {
+    opacity: 0;
 }
 
-.reveal .fragment.visible {
+.reveal .fragment.fade-in.visible {
     opacity: 1;
-    transform: none;
+}
+
+.reveal .fragment.zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.reveal .fragment.zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
 }
 
 /* ============================================
@@ -303,323 +744,24 @@
 
 @media screen and (max-width: 1024px) {
     .reveal {
-        font-size: 32px;
+        font-size: 36px;
     }
     
     .main-title {
-        font-size: 4.5rem !important;
+        font-size: 5rem !important;
     }
     
     .reveal h2 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+    }
+    
+    .metrics-grid,
+    .benefits-grid,
+    .projects-grid,
+    .two-column {
+        grid-template-columns: 1fr;
     }
 }
-
-/* ============================================
-   METRICS & DATA VISUALIZATION
-   ============================================ */
-
-.metrics-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-    margin: var(--spacing-xl) 0;
-}
-
-.metric-card {
-    background: var(--color-surface);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    border-left: 4px solid var(--color-accent);
-    text-align: center;
-}
-
-.metric-value {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--color-accent-light);
-    line-height: 1;
-    margin-bottom: var(--spacing-sm);
-}
-
-.metric-label {
-    font-size: 1.3rem;
-    color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-xs);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.metric-context {
-    font-size: 1.1rem;
-    color: var(--color-text-muted);
-    font-style: italic;
-}
-
-/* ============================================
-   COMPARISON GRIDS
-   ============================================ */
-
-.comparison-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-    margin: var(--spacing-xl) 0;
-}
-
-.comparison-box {
-    background: var(--color-surface);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    border-left: 3px solid var(--color-border);
-}
-
-.comparison-box.highlight {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(129, 140, 248, 0.1));
-    border-left-color: var(--color-accent);
-}
-
-.comparison-box h3 {
-    font-size: 1.8rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-text-primary);
-}
-
-.comparison-box p {
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
-}
-
-/* ============================================
-   TWO COLUMN LAYOUT
-   ============================================ */
-
-.two-column {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-xl);
-    margin: var(--spacing-lg) 0;
-}
-
-.two-column h3 {
-    font-size: 1.8rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-accent-light);
-}
-
-/* ============================================
-   TIMELINE
-   ============================================ */
-
-.timeline {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-lg);
-    margin: var(--spacing-xl) 0;
-}
-
-.timeline-item {
-    background: var(--color-surface);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    border-left: 4px solid var(--color-accent);
-    position: relative;
-}
-
-.timeline-item h3 {
-    font-size: 1.6rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-accent-light);
-}
-
-.timeline-item p {
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
-    line-height: 1.6;
-}
-
-/* ============================================
-   FEATURE BOXES
-   ============================================ */
-
-.feature-box {
-    background: var(--color-surface);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    border-left: 4px solid var(--color-accent);
-    margin: var(--spacing-lg) 0;
-}
-
-.feature-box h3,
-.feature-box h4 {
-    font-size: 1.6rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-accent-light);
-}
-
-.feature-box p {
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-sm);
-}
-
-/* ============================================
-   BIG QUOTES
-   ============================================ */
-
-.big-quote {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--color-accent-light);
-    margin: var(--spacing-xl) 0;
-    line-height: 1.4;
-    padding: var(--spacing-lg);
-}
-
-.big-quote.highlight {
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(129, 140, 248, 0.1));
-    border-radius: 12px;
-}
-
-/* ============================================
-   REVENUE & BENEFITS
-   ============================================ */
-
-.revenue-breakdown {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg);
-    margin: var(--spacing-xl) 0;
-}
-
-.revenue-item {
-    background: var(--color-surface);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    border-left: 4px solid var(--color-accent);
-}
-
-.revenue-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-sm);
-    color: var(--color-text-primary);
-}
-
-.revenue-item .metric-value {
-    font-size: 2.5rem;
-    margin: var(--spacing-sm) 0;
-}
-
-.revenue-item p {
-    font-size: 1.2rem;
-    color: var(--color-text-secondary);
-}
-
-.total-revenue {
-    margin-top: var(--spacing-xl);
-    padding: var(--spacing-lg);
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(129, 140, 248, 0.1));
-    border-radius: 12px;
-    border-left: 4px solid var(--color-accent);
-}
-
-.total-revenue h3 {
-    font-size: 1.8rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-accent-light);
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-    margin: var(--spacing-xl) 0;
-}
-
-.benefit-box {
-    background: var(--color-surface);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    border-left: 4px solid var(--color-accent);
-}
-
-.benefit-box h3 {
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-accent-light);
-}
-
-/* ============================================
-   PROJECTS GRID
-   ============================================ */
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
-    margin: var(--spacing-xl) 0;
-}
-
-.project-box {
-    background: var(--color-surface);
-    padding: var(--spacing-lg);
-    border-radius: 12px;
-    border-left: 4px solid var(--color-accent);
-}
-
-.project-box h3 {
-    font-size: 1.6rem;
-    margin-bottom: var(--spacing-md);
-    color: var(--color-accent-light);
-}
-
-/* ============================================
-   COMPACT LISTS
-   ============================================ */
-
-.insight-list.compact .insight-item {
-    margin-bottom: var(--spacing-sm);
-    padding: var(--spacing-sm);
-}
-
-.insight-list.compact .insight-item .icon {
-    font-size: 1.5rem;
-}
-
-.insight-list.compact .insight-item .text {
-    font-size: 1.2rem;
-}
-
-/* ============================================
-   TABLE ENHANCEMENTS
-   ============================================ */
-
-.comparison-table tbody tr.highlight-row {
-    background: rgba(99, 102, 241, 0.1);
-}
-
-.comparison-table tbody tr.highlight-row td {
-    font-weight: 600;
-}
-
-/* ============================================
-   FINAL MESSAGE
-   ============================================ */
-
-.final-message {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.final-message .big-quote {
-    font-size: 1.8rem;
-    margin: var(--spacing-lg) 0;
-}
-
-/* ============================================
-   PRINT STYLES
-   ============================================ */
 
 @media print {
     .reveal {
@@ -628,13 +770,5 @@
     
     .reveal .slides section {
         page-break-after: always;
-    }
-    
-    .metrics-grid,
-    .comparison-grid,
-    .revenue-breakdown,
-    .benefits-grid,
-    .projects-grid {
-        grid-template-columns: 1fr;
     }
 }
