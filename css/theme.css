@@ -1,6 +1,7 @@
 /* ============================================
    ULTIMA 9.0 PRESENTATION THEME
    Apple Keynote + McKinsey inspired
+   UPDATED: Увеличенные шрифты для проектора
    ============================================ */
 
 :root {
@@ -33,7 +34,7 @@
 
 .reveal {
     font-family: var(--font-family);
-    font-size: 32px;
+    font-size: 40px; /* УВЕЛИЧЕНО: было 32px */
     font-weight: 400;
     color: var(--color-text-primary);
 }
@@ -58,16 +59,16 @@
 }
 
 .reveal h1 {
-    font-size: 4rem;
+    font-size: 5rem; /* УВЕЛИЧЕНО: было 4rem */
 }
 
 .reveal h2 {
-    font-size: 2.5rem;
+    font-size: 3.2rem; /* УВЕЛИЧЕНО: было 2.5rem */
     margin-bottom: var(--spacing-md);
 }
 
 .reveal h3 {
-    font-size: 1.75rem;
+    font-size: 2.2rem; /* УВЕЛИЧЕНО: было 1.75rem */
 }
 
 .reveal p {
@@ -99,7 +100,7 @@
 }
 
 .main-title {
-    font-size: 5rem !important;
+    font-size: 6.5rem !important; /* УВЕЛИЧЕНО: было 5rem */
     font-weight: 800 !important;
     background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
     -webkit-background-clip: text;
@@ -110,7 +111,7 @@
 }
 
 .subtitle {
-    font-size: 1.75rem !important;
+    font-size: 2.2rem !important; /* УВЕЛИЧЕНО: было 1.75rem */
     color: var(--color-text-secondary);
     font-weight: 500;
     margin-bottom: var(--spacing-md) !important;
@@ -124,13 +125,13 @@
 }
 
 .tagline {
-    font-size: 1.25rem;
+    font-size: 1.6rem; /* УВЕЛИЧЕНО: было 1.25rem */
     color: var(--color-text-muted);
     margin-bottom: var(--spacing-sm) !important;
 }
 
 .tagline-secondary {
-    font-size: 1rem;
+    font-size: 1.3rem; /* УВЕЛИЧЕНО: было 1rem */
     color: var(--color-text-muted);
     font-style: italic;
 }
@@ -144,7 +145,7 @@
     margin: var(--spacing-xl) 0;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: 1.1rem;
+    font-size: 1.4rem; /* УВЕЛИЧЕНО: было 1.1rem */
 }
 
 .comparison-table thead th {
@@ -153,7 +154,7 @@
     font-weight: 600;
     text-align: left;
     border-bottom: 2px solid var(--color-border);
-    font-size: 1.3rem;
+    font-size: 1.7rem; /* УВЕЛИЧЕНО: было 1.3rem */
 }
 
 .comparison-table thead th.highlight-col {
@@ -165,6 +166,7 @@
     padding: var(--spacing-md);
     border-bottom: 1px solid var(--color-border);
     color: var(--color-text-secondary);
+    font-size: 1.4rem; /* УВЕЛИЧЕНО */
 }
 
 .comparison-table tbody td.highlight-cell {
@@ -197,6 +199,7 @@
     border-radius: 12px;
     border-left: 3px solid var(--color-accent);
     transition: all 0.3s ease;
+    font-size: 1.3rem; /* УВЕЛИЧЕНО */
 }
 
 .insight-item:hover {
@@ -205,7 +208,7 @@
 }
 
 .insight-item .icon {
-    font-size: 2rem;
+    font-size: 2.5rem; /* УВЕЛИЧЕНО: было 2rem */
     flex-shrink: 0;
     line-height: 1;
 }
@@ -214,6 +217,7 @@
     flex: 1;
     line-height: 1.5;
     color: var(--color-text-secondary);
+    font-size: 1.3rem; /* УВЕЛИЧЕНО */
 }
 
 /* ============================================
@@ -221,7 +225,7 @@
    ============================================ */
 
 .section-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.6rem; /* УВЕЛИЧЕНО: было 1.25rem */
     color: var(--color-text-muted);
     font-weight: 400;
     margin-top: var(--spacing-sm);
@@ -237,7 +241,7 @@
 
 .conclusion p {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* УВЕЛИЧЕНО: было 1.2rem */
     color: var(--color-text-primary);
 }
 
@@ -252,7 +256,7 @@
 .note p {
     margin: 0;
     color: var(--color-text-secondary);
-    font-size: 1rem;
+    font-size: 1.3rem; /* УВЕЛИЧЕНО: было 1rem */
 }
 
 /* ============================================
@@ -277,7 +281,7 @@
     background: var(--color-surface);
     padding: 8px 16px;
     border-radius: 8px;
-    font-size: 0.8rem;
+    font-size: 1rem; /* УВЕЛИЧЕНО: было 0.8rem */
 }
 
 /* ============================================
@@ -299,15 +303,15 @@
 
 @media screen and (max-width: 1024px) {
     .reveal {
-        font-size: 24px;
+        font-size: 32px;
     }
     
     .main-title {
-        font-size: 3.5rem !important;
+        font-size: 4.5rem !important;
     }
     
     .reveal h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -317,7 +321,7 @@
 
 @media print {
     .reveal {
-        font-size: 16px;
+        font-size: 18px;
     }
     
     .reveal .slides section {
