@@ -820,10 +820,72 @@
 }
 
 /* ============================================
-   RESPONSIVE
+   UTILITY TEXT SCALE CLASSES
    ============================================ */
 
-@media screen and (max-width: 1024px) {
+.text-plus-20 {
+    font-size: 1.2em;
+}
+
+.text-plus-30 {
+    font-size: 1.3em;
+}
+
+.text-minus-30 {
+    font-size: 0.7em;
+}
+
+/* ============================================
+   CONCEPT CARDS (для слайда 13)
+   ============================================ */
+
+.concept-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-xl) 0;
+}
+
+.concept-card {
+    background: var(--color-surface);
+    padding: var(--spacing-xl);
+    border-radius: 12px;
+    border-left: 4px solid var(--color-accent);
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.concept-card:hover {
+    transform: translateX(8px);
+}
+
+.concept-card p {
+    margin: 0;
+}
+
+/* Centered subheader for concept cards */
+.centered-subheader {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-accent-light);
+    margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+}
+
+/* ============================================
+   FULL-WIDTH BLOCK
+   ============================================ */
+
+.full-block {
+    width: 100%;
+}
+
+/* ============================================
+   END UTILITIES
+   ============================================ */
     .reveal {
         font-size: 36px;
     }
